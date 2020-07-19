@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+     <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<div style="height:50px; background-color: #232323;">
+		<h4 style="color: white;margin-left: 50px; padding-top:13px; font-family: 'Montserrat'; font-size: 20px;">BWRM Video Converter</h4>
+	</div>
+
+    <div style="width:300px; margin-left: 50px">
+
+    <div style="margin-top: 25px;">
+        <button id="ameVCSelectExportLocation" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px;">Select Export Location</button>
+        
+    </div>
+    
+    <div>
+    <label style="color:white; margin-top: 10px; font-family: 'Montserrat';font-size: 15px" for="ameVCExportPath">Export Path:</label>
+    <p id="ameVCExportPath" style="color:white; font-family: 'Montserrat-thin';font-size: 12px"></p>
+    </div>
+
+	<form style="font-family: 'Montserrat';font-size: 15px; margin-top: 25px">
+        <div class="form-group" style="width:300px">
+            <label style="color:white" for="fpCustomText">Address:</label>
+            
+            <textarea id="ameVCAddress" class="form-control" rows="1"></textarea>
+        </div>
+        <div class="form-group" style="width:300px; margin-top: 25px">
+            <label style="color:white" for="ameVCCopyCreateProxyDD">Copy/Create Proxy</label>
+    
+            <select id="ameVCCopyCreateProxyDD" class="form-control">
+                <option>Create Proxy</option>
+                <option>Copy & Create Proxy</option>
+            </select>
+        </div>
+    </form>
+
+    <div style="margin-top: 25px;">
+        <button id="ameVCSelectVideoFiles" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px;">Select Video Files</button>
+        
+    </div>
+
+	<br>
+	<br>
+	<br>
+	<button id="ameVCHelpButton" class="btn btn-info btn-circle btn-circle-sm border"><i class="fa fa-info"></i></button>
+	<img src="lib/bwrm Logo White.png" style="width: 100px; float:right">
+    <div>
+        <p style="float:right; color:white; font-family: 'Montserrat-thin';font-size: 12px">V1.07.20</p>
+    </div>
+	<br>
+
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="./lib/jquery-1.9.1.js"></script>
+<script src="./ext.js"></script>
+<script>
+</script>
+
+    
+</body>
+</html>

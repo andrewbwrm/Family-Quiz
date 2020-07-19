@@ -1,0 +1,60 @@
+/*
+p {
+	font-family: "LucidaGrande", sans-serif;
+	text-align:center;
+}
+
+button
+{
+	font-family: "LucidaGrande", sans-serif;
+	font-size:12px;
+	border:1px solid;
+	height:20px;
+}
+
+input[type=text]
+{
+	height:12px;
+}
+
+#content {
+	margin-right:auto;
+	margin-left:auto;
+	vertical-align:middle;
+	width:100%;
+}
+
+#content ul {
+	padding:0px;
+}
+
+#content ul li {
+	margin:3px 0px 3px 0px;
+}
+
+*/
+
+body{
+  background: #232323;
+}
+
+.btn-circle {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.btn-circle i {
+  position: relative;
+  top: -1px;
+}
+
+.btn-circle-sm {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 0.9rem;
+}
