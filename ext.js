@@ -107,39 +107,185 @@
                 $("#animalSpoorImg14").toggleClass("incorrectAnswer");
             }
            
-           console.log(animalSpoorScore);
+           //console.log(animalSpoorScore);
 
            document.getElementById("animalSpoorScore").innerHTML = "Score: " + animalSpoorScore + "/14";
 
         });
 
+    $("#pantoneColourSubmit").click(function () {
+
+        var pantoneColourScore = 0;
+
+            if(document.getElementById("pantoneColourSelect1").value === "Fuzzy Wuzzy Brown"){
+                $("#pantoneColour1").toggleClass("correctAnswer");
+                pantoneColourScore += 1;
+            }else{
+                $("#pantoneColour1").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("pantoneColourSelect2").value === "Beaver"){
+                $("#pantoneColour2").toggleClass("correctAnswer");
+                pantoneColourScore += 1;
+            }else{
+                $("#pantoneColour2").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("pantoneColourSelect3").value === "Green Yellow"){
+                $("#pantoneColour3").toggleClass("correctAnswer");
+                pantoneColourScore += 1;
+            }else{
+                $("#pantoneColour3").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("pantoneColourSelect4").value === "Granny Smith Apple"){
+                $("#pantoneColour4").toggleClass("correctAnswer");
+                pantoneColourScore += 1;
+            }else{
+                $("#pantoneColour4").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("pantoneColourSelect5").value === "Green"){
+                $("#pantoneColour5").toggleClass("correctAnswer");
+                pantoneColourScore += 1;
+            }else{
+                $("#pantoneColour5").toggleClass("incorrectAnswer");
+            }    
+
+            if(document.getElementById("pantoneColourSelect6").value === "Blue Green"){
+                $("#pantoneColour6").toggleClass("correctAnswer");
+                pantoneColourScore += 1;
+            }else{
+                $("#pantoneColour6").toggleClass("incorrectAnswer");
+            }    
+
+            if(document.getElementById("pantoneColourSelect7").value === "Wild Blue Yonder"){
+                $("#pantoneColour7").toggleClass("correctAnswer");
+                pantoneColourScore += 1;
+            }else{
+                $("#pantoneColour7").toggleClass("incorrectAnswer");
+            }    
+
+            if(document.getElementById("pantoneColourSelect8").value === "Violet"){
+                $("#pantoneColour8").toggleClass("correctAnswer");
+                pantoneColourScore += 1;
+            }else{
+                $("#pantoneColour8").toggleClass("incorrectAnswer");
+            }    
+
+            if(document.getElementById("pantoneColourSelect9").value === "Hot Magenta"){
+                $("#pantoneColour9").toggleClass("correctAnswer");
+                pantoneColourScore += 1;
+            }else{
+                $("#pantoneColour9").toggleClass("incorrectAnswer");
+            }    
+
+            if(document.getElementById("pantoneColourSelect10").value === "Wild Watermelon"){
+                $("#pantoneColour10").toggleClass("correctAnswer");
+                pantoneColourScore += 1;
+            }else{
+                $("#pantoneColour10").toggleClass("incorrectAnswer");
+            }  
+
+            //console.log(pantoneColourScore);
+
+            document.getElementById("pantoneColourScore").innerHTML = "Score: " + pantoneColourScore + "/10";  
+
+    });
+
+
+    $("#aerialCitiesSubmit").click(function () {
+
+        var aerialCitiesScore = 0;
+
+            if(document.getElementById("aerialCitiesSelect1").value === "London, UK"){
+                $("#aerialCities1").toggleClass("correctAnswer");
+                aerialCitiesScore += 1;
+            }else{
+                $("#aerialCities1").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("aerialCitiesSelect2").value === "Melbourne, Australia"){
+                $("#aerialCities2").toggleClass("correctAnswer");
+                aerialCitiesScore += 1;
+            }else{
+                $("#aerialCities2").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("aerialCitiesSelect3").value === "Paris, France"){
+                $("#aerialCities3").toggleClass("correctAnswer");
+                aerialCitiesScore += 1;
+            }else{
+                $("#aerialCities3").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("aerialCitiesSelect4").value === "Newcastle, UK"){
+                $("#aerialCities4").toggleClass("correctAnswer");
+                aerialCitiesScore += 1;
+            }else{
+                $("#aerialCities4").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("aerialCitiesSelect5").value === "New York City, USA"){
+                $("#aerialCities5").toggleClass("correctAnswer");
+                aerialCitiesScore += 1;
+            }else{
+                $("#aerialCities5").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("aerialCitiesSelect6").value === "Cape Town, SA"){
+                $("#aerialCities6").toggleClass("correctAnswer");
+                aerialCitiesScore += 1;
+            }else{
+                $("#aerialCities6").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("aerialCitiesSelect7").value === "Port Moresby, PNG"){
+                $("#aerialCities7").toggleClass("correctAnswer");
+                aerialCitiesScore += 1;
+            }else{
+                $("#aerialCities7").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("aerialCitiesSelect8").value === "Milford Sound, NZ"){
+                $("#aerialCities8").toggleClass("correctAnswer");
+                aerialCitiesScore += 1;
+            }else{
+                $("#aerialCities8").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("aerialCitiesSelect9").value === "Le Morne, Mauritius"){
+                $("#aerialCities9").toggleClass("correctAnswer");
+                aerialCitiesScore += 1;
+            }else{
+                $("#aerialCities9").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("aerialCitiesSelect10").value === "Sydney, Australia"){
+                $("#aerialCities10").toggleClass("correctAnswer");
+                aerialCitiesScore += 1;
+            }else{
+                $("#aerialCities10").toggleClass("incorrectAnswer");
+            }
+
+            if(document.getElementById("aerialCitiesSelect11").value === "Cardiff, Wales"){
+                $("#aerialCities11").toggleClass("correctAnswer");
+                aerialCitiesScore += 1;
+            }else{
+                $("#aerialCities11").toggleClass("incorrectAnswer");
+            }
+
+            //console.log(aerialCitiesScore);
+
+            document.getElementById("aerialCitiesScore").innerHTML = "Score: " + aerialCitiesScore + "/11";  
+
+
+    });
+
         
 
-        $("#ameVCSelectExportLocation").click(function () {
 
-            csInterface.evalScript('ameVCSelectExportLocation()', function(result){
-                document.getElementById("ameVCExportPath").innerHTML= result;
-            });
-
-
-        });
-
-        $("#ameVCSelectVideoFiles").click(function () {
-
-            var address = document.getElementById("ameVCAddress").value;
-            var myAddress = ('var myAddress = "' + address + '";');
-
-            var copyCreate = document.getElementById("ameVCCopyCreateProxyDD").value;
-            var myCopyCreate = ('var myCopyCreate = "' + copyCreate + '";');
-
-            csInterface.evalScript(myAddress + myCopyCreate + 'ameVCSelectVideoFiles()', function(result) {
-            });
-        });
-
-
-        $("#ameVCHelpButton").click(function () {
-            csInterface.openURLInDefaultBrowser("http://help.bwrm.com/en/articles/3988041-remote-video-editing-proxy-workflow");
-        });
+        
 
         }        
         

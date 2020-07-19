@@ -51,10 +51,7 @@ i:hover{
             <ul id="tabsJustified" class="nav nav-tabs sticky-top" style="color:white; font-size: 15px; background-color: #232323;">
                 <li class="nav-item"><a href="" data-target="#animalSpoorTab" data-toggle="tab" class="nav-link small text-uppercase active">Animal Spoor</a></li>
                 <li class="nav-item"><a href="" data-target="#pantoneColoursTab" data-toggle="tab" class="nav-link small text-uppercase">Pantone Colours</a></li>
-                <li class="nav-item"><a href="" data-target="#googleEarthTab" data-toggle="tab" class="nav-link small text-uppercase">Google Earth</a></li>
-                <li class="nav-item"><a href="" data-target="#qaTab" data-toggle="tab" class="nav-link small text-uppercase">QA</a></li>
-                <li class="nav-item"><a href="" data-target="#exportTab" data-toggle="tab" class="nav-link small text-uppercase">Export</a></li>
-                <li class="nav-item"><a href="" data-target="#settingsTab" data-toggle="tab" class="nav-link small text-uppercase">Help</a></li>
+                <li class="nav-item"><a href="" data-target="#googleEarthTab" data-toggle="tab" class="nav-link small text-uppercase">Aerial Cities</a></li>
             </ul>
             <br>
             <div id="tabsJustifiedContent" class="tab-content" style="margin-left: 25px">
@@ -371,7 +368,7 @@ i:hover{
 
                     <button id="animalSpoorSubmit" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-top: 20px; margin-bottom: 20px">Submit Answers</button>
                     <div>
-                      <p id="animalSpoorScore" style="color:white; margin-bottom: 10px">Score: </p>
+                      <p id="animalSpoorScore" style="color:white; margin-bottom: 10px"></p>
                     </div>
                     
                 </div>
@@ -379,115 +376,118 @@ i:hover{
                 <div id="pantoneColoursTab" class="tab-pane fade">
                     <div>
                         <p style="color:white; margin-bottom: 10px">1.</p>
-                        <div class="colourDiv" style="background-color:#CC6666;"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <div id="pantoneColour1" class="colourDiv" style="background-color:#CC6666;"></div>
+                        <select id="pantoneColourSelect1"  class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Mahogany</option>
-                            <option value="correct" >Fuzzy Wuzzy Brown</option>
-                            <option value="" >Chestnut</option>
+                            <option value="Mahogany" >Mahogany</option>
+                            <option value="Fuzzy Wuzzy Brown" >Fuzzy Wuzzy Brown</option>
+                            <option value="Chestnut" >Chestnut</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">2.</p>
-                        <div class="colourDiv" style="background-color:#9F8170;"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <div id="pantoneColour2" class="colourDiv" style="background-color:#9F8170;"></div>
+                        <select id="pantoneColourSelect2" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="correct" >Beaver</option>
-                            <option value="" >Tumbleweed</option>
-                            <option value="" >Raw Sienna</option>
+                            <option value="Beaver" >Beaver</option>
+                            <option value="Tumbleweed" >Tumbleweed</option>
+                            <option value="Raw Sienna" >Raw Sienna</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">3.</p>
-                        <div class="colourDiv" style="background-color:#F0E891;"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <div id="pantoneColour3" class="colourDiv" style="background-color:#F0E891;"></div>
+                        <select id="pantoneColourSelect3" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Banana Mania</option>
-                            <option value="correct" >Green Yellow</option>
-                            <option value="" >Unmellow Yellow</option>
+                            <option value="Banana Mania" >Banana Mania</option>
+                            <option value="Green Yellow" >Green Yellow</option>
+                            <option value="Unmellow Yellow" >Unmellow Yellow</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">4.</p>
-                        <div class="colourDiv" style="background-color:#A8E4A0;"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <div id="pantoneColour4" class="colourDiv" style="background-color:#A8E4A0;"></div>
+                        <select id="pantoneColourSelect4" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="correct" >Granny Smith Apple</option>
-                            <option value="" >Inch Worm</option>
-                            <option value="" >Asparagus</option>
+                            <option value="Granny Smith Apple" >Granny Smith Apple</option>
+                            <option value="Inch Worm" >Inch Worm</option>
+                            <option value="Asparagus" >Asparagus</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">5.</p>
-                        <div class="colourDiv" style="background-color:#1CAC78;"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <div id="pantoneColour5" class="colourDiv" style="background-color:#1CAC78;"></div>
+                        <select id="pantoneColourSelect5" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Forest Green</option>
-                            <option value="" >Sea Green</option>
-                            <option value="correct" >Green</option>
+                            <option value="Forest Green" >Forest Green</option>
+                            <option value="Sea Green" >Sea Green</option>
+                            <option value="Green" >Green</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">6.</p>
-                        <div class="colourDiv" style="background-color:#199EBD;"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <div id="pantoneColour6" class="colourDiv" style="background-color:#199EBD;"></div>
+                        <select id="pantoneColourSelect6" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="correct" >Blue Green</option>
-                            <option value="" >Cerulean</option>
-                            <option value="" >Pacific Blue</option>
+                            <option value="Blue Green" >Blue Green</option>
+                            <option value="Cerulean" >Cerulean</option>
+                            <option value="Pacific Blue" >Pacific Blue</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">7.</p>
-                        <div class="colourDiv" style="background-color:#A2ADD0;"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <div id="pantoneColour7" class="colourDiv" style="background-color:#A2ADD0;"></div>
+                        <select id="pantoneColourSelect7" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="correct" >Wild Blue Yonder</option>
-                            <option value="" >Periwinkle</option>
-                            <option value="" >Manatee</option>
+                            <option value="Wild Blue Yonder" >Wild Blue Yonder</option>
+                            <option value="Periwinkle" >Periwinkle</option>
+                            <option value="Manatee" >Manatee</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">8.</p>
-                        <div class="colourDiv" style="background-color:#926EAE;"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width:300px; height:35px; margin-bottom: 15px">
+                        <div id="pantoneColour8" class="colourDiv" style="background-color:#926EAE;"></div>
+                        <select id="pantoneColourSelect8" class="js-example-basic-single" name="state" style="width:300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Wisteria</option>
-                            <option value="" >Purple Mountains’ Majesty</option>
-                            <option value="correct" >Violet</option>
+                            <option value="Wisteria" >Wisteria</option>
+                            <option value="Purple Mountains’ Majesty" >Purple Mountains’ Majesty</option>
+                            <option value="Violet" >Violet</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">9.</p>
-                        <div class="colourDiv" style="background-color:#FF1DCE;"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <div id="pantoneColour9" class="colourDiv" style="background-color:#FF1DCE;"></div>
+                        <select id="pantoneColourSelect9" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Purple Pizzazz</option>
-                            <option value="correct" >Hot Magenta</option>
-                            <option value="" >Razzle Dazzle Rose</option>
+                            <option value="Purple Pizzazz" >Purple Pizzazz</option>
+                            <option value="Hot Magenta" >Hot Magenta</option>
+                            <option value="Razzle Dazzle Rose" >Razzle Dazzle Rose</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">10.</p>
-                        <div class="colourDiv" style="background-color:#FC6C85;"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <div id="pantoneColour10" class="colourDiv" style="background-color:#FC6C85;"></div>
+                        <select id="pantoneColourSelect10" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Mauvelous</option>
-                            <option value="correct" >Wild Watermelon</option>
-                            <option value="" >Salmon</option>
+                            <option value="Mauvelous" >Mauvelous</option>
+                            <option value="Wild Watermelon" >Wild Watermelon</option>
+                            <option value="Salmon" >Salmon</option>
                         </select>
                     </div>
 
-                    <button id="randomUtility" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-top: 20px">Submit Answers</button>
+                    <button id="pantoneColourSubmit" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-top: 20px; margin-bottom: 20px">Submit Answers</button>
+                    <div>
+                      <p id="pantoneColourScore" style="color:white; margin-bottom: 10px"></p>
+                    </div>
                        
                     
                 </div>
@@ -495,156 +495,156 @@ i:hover{
                 <div id="googleEarthTab" class="tab-pane fade">
                    <div>
                         <p style="color:white; margin-bottom: 10px">1.</p>
-                          <img class="colourDiv" src="Images/GoogleEarth/London1.jpg" alt="">
+                          <img id="aerialCities1" class="colourDiv" src="Images/GoogleEarth/London1.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="aerialCitiesSelect1" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Location</option>
-                            <option value="" >Cape Town, SA</option>
-                            <option value="" >Cardiff, Wales</option>
-                            <option value="" >Le Morne, Mauritius</option>
-                            <option value="" >London, UK</option>
-                            <option value="" >Melbourne, Australia</option>
-                            <option value="" >Milford Sound, NZ</option>
-                            <option value="" >Newcastle, UK</option>
-                            <option value="" >New York City, USA</option>
-                            <option value="" >Paris, France</option>
-                            <option value="" >Port Moresby, PNG</option>
-                            <option value="" >Sydney, Australia</option>
+                            <option value="Cape Town, SA" >Cape Town, SA</option>
+                            <option value="Cardiff, Wales" >Cardiff, Wales</option>
+                            <option value="Le Morne, Mauritius" >Le Morne, Mauritius</option>
+                            <option value="London, UK" >London, UK</option>
+                            <option value="Melbourne, Australia" >Melbourne, Australia</option>
+                            <option value="Milford Sound, NZ" >Milford Sound, NZ</option>
+                            <option value="Newcastle, UK" >Newcastle, UK</option>
+                            <option value="New York City, USA" >New York City, USA</option>
+                            <option value="Paris, France" >Paris, France</option>
+                            <option value="Port Moresby, PNG" >Port Moresby, PNG</option>
+                            <option value="Sydney, Australia" >Sydney, Australia</option>
                         </select>
                         </div>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">2.</p>
-                          <img class="colourDiv" src="Images/GoogleEarth/Melbourne1.jpeg" alt="">
+                          <img id="aerialCities2" class="colourDiv" src="Images/GoogleEarth/Melbourne1.jpeg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="aerialCitiesSelect2" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Location</option>
-                            <option value="" >Cape Town, SA</option>
-                            <option value="" >Cardiff, Wales</option>
-                            <option value="" >Le Morne, Mauritius</option>
-                            <option value="" >London, UK</option>
-                            <option value="" >Melbourne, Australia</option>
-                            <option value="" >Milford Sound, NZ</option>
-                            <option value="" >Newcastle, UK</option>
-                            <option value="" >New York City, USA</option>
-                            <option value="" >Paris, France</option>
-                            <option value="" >Port Moresby, PNG</option>
-                            <option value="" >Sydney, Australia</option>
+                           <option value="Cape Town, SA" >Cape Town, SA</option>
+                            <option value="Cardiff, Wales" >Cardiff, Wales</option>
+                            <option value="Le Morne, Mauritius" >Le Morne, Mauritius</option>
+                            <option value="London, UK" >London, UK</option>
+                            <option value="Melbourne, Australia" >Melbourne, Australia</option>
+                            <option value="Milford Sound, NZ" >Milford Sound, NZ</option>
+                            <option value="Newcastle, UK" >Newcastle, UK</option>
+                            <option value="New York City, USA" >New York City, USA</option>
+                            <option value="Paris, France" >Paris, France</option>
+                            <option value="Port Moresby, PNG" >Port Moresby, PNG</option>
+                            <option value="Sydney, Australia" >Sydney, Australia</option>
                         </select>
                         </div>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">3.</p>
-                          <img class="colourDiv" src="Images/GoogleEarth/Eiffel Tower.jpg" alt="">
+                          <img id="aerialCities3" class="colourDiv" src="Images/GoogleEarth/Eiffel Tower.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="aerialCitiesSelect3" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Location</option>
-                            <option value="" >Cape Town, SA</option>
-                            <option value="" >Cardiff, Wales</option>
-                            <option value="" >Le Morne, Mauritius</option>
-                            <option value="" >London, UK</option>
-                            <option value="" >Melbourne, Australia</option>
-                            <option value="" >Milford Sound, NZ</option>
-                            <option value="" >Newcastle, UK</option>
-                            <option value="" >New York City, USA</option>
-                            <option value="" >Paris, France</option>
-                            <option value="" >Port Moresby, PNG</option>
-                            <option value="" >Sydney, Australia</option>
+                            <option value="Cape Town, SA" >Cape Town, SA</option>
+                            <option value="Cardiff, Wales" >Cardiff, Wales</option>
+                            <option value="Le Morne, Mauritius" >Le Morne, Mauritius</option>
+                            <option value="London, UK" >London, UK</option>
+                            <option value="Melbourne, Australia" >Melbourne, Australia</option>
+                            <option value="Milford Sound, NZ" >Milford Sound, NZ</option>
+                            <option value="Newcastle, UK" >Newcastle, UK</option>
+                            <option value="New York City, USA" >New York City, USA</option>
+                            <option value="Paris, France" >Paris, France</option>
+                            <option value="Port Moresby, PNG" >Port Moresby, PNG</option>
+                            <option value="Sydney, Australia" >Sydney, Australia</option>
                         </select>
                         </div>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">4.</p>
-                          <img class="colourDiv" src="Images/GoogleEarth/Tyne Bridge.jpg" alt="">
+                          <img id="aerialCities4" class="colourDiv" src="Images/GoogleEarth/Tyne Bridge.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="aerialCitiesSelect4" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Location</option>
-                            <option value="" >Cape Town, SA</option>
-                            <option value="" >Cardiff, Wales</option>
-                            <option value="" >Le Morne, Mauritius</option>
-                            <option value="" >London, UK</option>
-                            <option value="" >Melbourne, Australia</option>
-                            <option value="" >Milford Sound, NZ</option>
-                            <option value="" >Newcastle, UK</option>
-                            <option value="" >New York City, USA</option>
-                            <option value="" >Paris, France</option>
-                            <option value="" >Port Moresby, PNG</option>
-                            <option value="" >Sydney, Australia</option>
+                            <option value="Cape Town, SA" >Cape Town, SA</option>
+                            <option value="Cardiff, Wales" >Cardiff, Wales</option>
+                            <option value="Le Morne, Mauritius" >Le Morne, Mauritius</option>
+                            <option value="London, UK" >London, UK</option>
+                            <option value="Melbourne, Australia" >Melbourne, Australia</option>
+                            <option value="Milford Sound, NZ" >Milford Sound, NZ</option>
+                            <option value="Newcastle, UK" >Newcastle, UK</option>
+                            <option value="New York City, USA" >New York City, USA</option>
+                            <option value="Paris, France" >Paris, France</option>
+                            <option value="Port Moresby, PNG" >Port Moresby, PNG</option>
+                            <option value="Sydney, Australia" >Sydney, Australia</option>
                         </select>
                         </div>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">5.</p>
-                          <img class="colourDiv" src="Images/GoogleEarth/New York.jpg" alt="">
+                          <img id="aerialCities5" class="colourDiv" src="Images/GoogleEarth/New York.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="aerialCitiesSelect5" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Location</option>
-                            <option value="" >Cape Town, SA</option>
-                            <option value="" >Cardiff, Wales</option>
-                            <option value="" >Le Morne, Mauritius</option>
-                            <option value="" >London, UK</option>
-                            <option value="" >Melbourne, Australia</option>
-                            <option value="" >Milford Sound, NZ</option>
-                            <option value="" >Newcastle, UK</option>
-                            <option value="" >New York City, USA</option>
-                            <option value="" >Paris, France</option>
-                            <option value="" >Port Moresby, PNG</option>
-                            <option value="" >Sydney, Australia</option>
+                            <option value="Cape Town, SA" >Cape Town, SA</option>
+                            <option value="Cardiff, Wales" >Cardiff, Wales</option>
+                            <option value="Le Morne, Mauritius" >Le Morne, Mauritius</option>
+                            <option value="London, UK" >London, UK</option>
+                            <option value="Melbourne, Australia" >Melbourne, Australia</option>
+                            <option value="Milford Sound, NZ" >Milford Sound, NZ</option>
+                            <option value="Newcastle, UK" >Newcastle, UK</option>
+                            <option value="New York City, USA" >New York City, USA</option>
+                            <option value="Paris, France" >Paris, France</option>
+                            <option value="Port Moresby, PNG" >Port Moresby, PNG</option>
+                            <option value="Sydney, Australia" >Sydney, Australia</option>
                         </select>
                         </div>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">6.</p>
-                          <img class="colourDiv" src="Images/GoogleEarth/Capetown.jpg" alt="">
+                          <img id="aerialCities6" class="colourDiv" src="Images/GoogleEarth/Capetown.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="aerialCitiesSelect6" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Location</option>
-                            <option value="" >Cape Town, SA</option>
-                            <option value="" >Cardiff, Wales</option>
-                            <option value="" >Le Morne, Mauritius</option>
-                            <option value="" >London, UK</option>
-                            <option value="" >Melbourne, Australia</option>
-                            <option value="" >Milford Sound, NZ</option>
-                            <option value="" >Newcastle, UK</option>
-                            <option value="" >New York City, USA</option>
-                            <option value="" >Paris, France</option>
-                            <option value="" >Port Moresby, PNG</option>
-                            <option value="" >Sydney, Australia</option>
+                            <option value="Cape Town, SA" >Cape Town, SA</option>
+                            <option value="Cardiff, Wales" >Cardiff, Wales</option>
+                            <option value="Le Morne, Mauritius" >Le Morne, Mauritius</option>
+                            <option value="London, UK" >London, UK</option>
+                            <option value="Melbourne, Australia" >Melbourne, Australia</option>
+                            <option value="Milford Sound, NZ" >Milford Sound, NZ</option>
+                            <option value="Newcastle, UK" >Newcastle, UK</option>
+                            <option value="New York City, USA" >New York City, USA</option>
+                            <option value="Paris, France" >Paris, France</option>
+                            <option value="Port Moresby, PNG" >Port Moresby, PNG</option>
+                            <option value="Sydney, Australia" >Sydney, Australia</option>
                         </select>
                         </div>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">7.</p>
-                          <img class="colourDiv" src="Images/GoogleEarth/POM.jpg" alt="">
+                          <img id="aerialCities7" class="colourDiv" src="Images/GoogleEarth/POM.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="aerialCitiesSelect7" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Location</option>
-                            <option value="" >Cape Town, SA</option>
-                            <option value="" >Cardiff, Wales</option>
-                            <option value="" >Le Morne, Mauritius</option>
-                            <option value="" >London, UK</option>
-                            <option value="" >Melbourne, Australia</option>
-                            <option value="" >Milford Sound, NZ</option>
-                            <option value="" >Newcastle, UK</option>
-                            <option value="" >New York City, USA</option>
-                            <option value="" >Paris, France</option>
-                            <option value="" >Port Moresby, PNG</option>
-                            <option value="" >Sydney, Australia</option>
+                            <option value="Cape Town, SA" >Cape Town, SA</option>
+                            <option value="Cardiff, Wales" >Cardiff, Wales</option>
+                            <option value="Le Morne, Mauritius" >Le Morne, Mauritius</option>
+                            <option value="London, UK" >London, UK</option>
+                            <option value="Melbourne, Australia" >Melbourne, Australia</option>
+                            <option value="Milford Sound, NZ" >Milford Sound, NZ</option>
+                            <option value="Newcastle, UK" >Newcastle, UK</option>
+                            <option value="New York City, USA" >New York City, USA</option>
+                            <option value="Paris, France" >Paris, France</option>
+                            <option value="Port Moresby, PNG" >Port Moresby, PNG</option>
+                            <option value="Sydney, Australia" >Sydney, Australia</option>
                         </select>
                         </div>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">8.</p>
-                          <img class="colourDiv" src="Images/GoogleEarth/Mitre Peak.jpg" alt="">
+                          <img id="aerialCities8" class="colourDiv" src="Images/GoogleEarth/Mitre Peak.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="aerialCitiesSelect8" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Location</option>
                             <option value="" >Cape Town, SA</option>
                             <option value="" >Cardiff, Wales</option>
@@ -663,121 +663,71 @@ i:hover{
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">9.</p>
-                          <img class="colourDiv" src="Images/GoogleEarth/Le Morne.jpg" alt="">
+                          <img id="aerialCities9" class="colourDiv" src="Images/GoogleEarth/Le Morne.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="aerialCitiesSelect9" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Location</option>
-                            <option value="" >Cape Town, SA</option>
-                            <option value="" >Cardiff, Wales</option>
-                            <option value="" >Le Morne, Mauritius</option>
-                            <option value="" >London, UK</option>
-                            <option value="" >Melbourne, Australia</option>
-                            <option value="" >Milford Sound, NZ</option>
-                            <option value="" >Newcastle, UK</option>
-                            <option value="" >New York City, USA</option>
-                            <option value="" >Paris, France</option>
-                            <option value="" >Port Moresby, PNG</option>
-                            <option value="" >Sydney, Australia</option>
+                            <option value="Cape Town, SA" >Cape Town, SA</option>
+                            <option value="Cardiff, Wales" >Cardiff, Wales</option>
+                            <option value="Le Morne, Mauritius" >Le Morne, Mauritius</option>
+                            <option value="London, UK" >London, UK</option>
+                            <option value="Melbourne, Australia" >Melbourne, Australia</option>
+                            <option value="Milford Sound, NZ" >Milford Sound, NZ</option>
+                            <option value="Newcastle, UK" >Newcastle, UK</option>
+                            <option value="New York City, USA" >New York City, USA</option>
+                            <option value="Paris, France" >Paris, France</option>
+                            <option value="Port Moresby, PNG" >Port Moresby, PNG</option>
+                            <option value="Sydney, Australia" >Sydney, Australia</option>
                         </select>
                         </div>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">10.</p>
-                          <img class="colourDiv" src="Images/GoogleEarth/Sydney Harbour Bridge.jpeg" alt="">
+                          <img id="aerialCities10" class="colourDiv" src="Images/GoogleEarth/Sydney Harbour Bridge.jpeg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="aerialCitiesSelect10" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Location</option>
-                            <option value="" >Cape Town, SA</option>
-                            <option value="" >Cardiff, Wales</option>
-                            <option value="" >Le Morne, Mauritius</option>
-                            <option value="" >London, UK</option>
-                            <option value="" >Melbourne, Australia</option>
-                            <option value="" >Milford Sound, NZ</option>
-                            <option value="" >Newcastle, UK</option>
-                            <option value="" >New York City, USA</option>
-                            <option value="" >Paris, France</option>
-                            <option value="" >Port Moresby, PNG</option>
-                            <option value="" >Sydney, Australia</option>
+                            <option value="Cape Town, SA" >Cape Town, SA</option>
+                            <option value="Cardiff, Wales" >Cardiff, Wales</option>
+                            <option value="Le Morne, Mauritius" >Le Morne, Mauritius</option>
+                            <option value="London, UK" >London, UK</option>
+                            <option value="Melbourne, Australia" >Melbourne, Australia</option>
+                            <option value="Milford Sound, NZ" >Milford Sound, NZ</option>
+                            <option value="Newcastle, UK" >Newcastle, UK</option>
+                            <option value="New York City, USA" >New York City, USA</option>
+                            <option value="Paris, France" >Paris, France</option>
+                            <option value="Port Moresby, PNG" >Port Moresby, PNG</option>
+                            <option value="Sydney, Australia" >Sydney, Australia</option>
                         </select>
                         </div>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">11.</p>
-                          <img class="colourDiv" src="Images/GoogleEarth/Cardiff.jpg" alt="">
+                          <img id="aerialCities11" class="colourDiv" src="Images/GoogleEarth/Cardiff.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="aerialCitiesSelect11" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Location</option>
-                            <option value="" >Cape Town, SA</option>
-                            <option value="" >Cardiff, Wales</option>
-                            <option value="" >Le Morne, Mauritius</option>
-                            <option value="" >London, UK</option>
-                            <option value="" >Melbourne, Australia</option>
-                            <option value="" >Milford Sound, NZ</option>
-                            <option value="" >Newcastle, UK</option>
-                            <option value="" >New York City, USA</option>
-                            <option value="" >Paris, France</option>
-                            <option value="" >Port Moresby, PNG</option>
-                            <option value="" >Sydney, Australia</option>
+                            <option value="Cape Town, SA" >Cape Town, SA</option>
+                            <option value="Cardiff, Wales" >Cardiff, Wales</option>
+                            <option value="Le Morne, Mauritius" >Le Morne, Mauritius</option>
+                            <option value="London, UK" >London, UK</option>
+                            <option value="Melbourne, Australia" >Melbourne, Australia</option>
+                            <option value="Milford Sound, NZ" >Milford Sound, NZ</option>
+                            <option value="Newcastle, UK" >Newcastle, UK</option>
+                            <option value="New York City, USA" >New York City, USA</option>
+                            <option value="Paris, France" >Paris, France</option>
+                            <option value="Port Moresby, PNG" >Port Moresby, PNG</option>
+                            <option value="Sydney, Australia" >Sydney, Australia</option>
                         </select>
                         </div>
                     </div>
-
-
-
-
                     
-                    <button id="randomUtility" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-top: 20px">Submit Answers</button>
-                    <p id="animalSpoorScore" style="color:white">Score: </p>
+                    <button id="aerialCitiesSubmit" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-top: 20px; margin-bottom: 20px">Submit Answers</button>
+                    <p id="aerialCitiesScore" style="color:white"></p>
                 </div>
-
-
-
-                <div id="qaTab" class="tab-pane fade">
-                    <div style="width:350px;">
-                      <button id="adminQASomething" disabled class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-bottom: 15px;">QA Something</button>
-                      <i id="adminQASomethingInfo" style="position:relative; color:white; float:right" class="fa fa-info"></i>
-                    </div>
-                    <div style="width:350px;">
-                        <button id="adminGetChanges" disabled class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-bottom: 15px;">Get Changes</button>
-                        <i id="adminGetChangesInfo" style="position:relative; color:white; float:right" class="fa fa-info"></i>
-                    </div>
-                
-    
-                </div>
-
-
-
-                <div id="exportTab" class="tab-pane fade">
-                    <div style="width:350px;">
-                        <button id="adminExportAllSequences" disabled class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px;">Export All Sequences</button>
-                        <i id="adminExportAllSequencesInfo" style="position:relative; color:white; float:right" class="fa fa-info"></i>
-                    </div>
-                </div>
-
-                <div id="settingsTab" class="tab-pane fade">
-                    <div style="width:350px;">
-                        <button id="adminReloadDashboard" class="btn btn-success" style="margin-bottom:15px; background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px;">Reload Dashboard</button>
-                        <i id="adminReloadDashboardInfo" style="position:relative; color:white; float:right" class="fa fa-info"></i>
-                    </div>
-
-                    <div>
-                      <button id="brandbookButton" class="btn btn-success" style="background-color: #32CC6E; margin-bottom: 15px; font-family: 'Montserrat';font-size: 15px;">Brandbook</button>
-                    </div>
-                    <div>
-                         <button id="ppWorkflowButton" class="btn btn-success" style="background-color: #32CC6E; margin-bottom: 15px; font-family: 'Montserrat';font-size: 15px;">PP Workflow</button>
-                    </div>
-                    <div>
-                         <button id="aeWorkflowButton" class="btn btn-success" style="background-color: #32CC6E; margin-bottom: 15px; font-family: 'Montserrat';font-size: 15px;">AE Workflow</button>
-                    </div>
-                    <div>
-                        <button id="adobeButton" class="btn btn-success" style="background-color: #32CC6E; margin-bottom: 15px; font-family: 'Montserrat';font-size: 15px;">Adobe</button>
-                    </div>
-
-                  
-                    
-                </div>
+          
             </div>
         </div>
     </div>
@@ -785,14 +735,6 @@ i:hover{
 <br>
 <div style="width: 350px; margin-left: 40px">
     <hr style="border: 1px solid white;">
-
-<br>
-
-    <button id="dashboardOverallInfo" class="btn btn-info btn-circle btn-circle-sm border" style="border-radius: 50%;"><i class="fa fa-info"></i></button>
-    <img src="icons/bwrm Logo White.png" style="width: 100px; float:right">
-    <div>
-        <p style="color: white; font-family: 'Montserrat-thin'; font-size: 12px; float:right">V1.0.14.20</p>
-    </div>
 </div>
 <br>
 <br>
