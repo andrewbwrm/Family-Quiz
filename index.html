@@ -1,81 +1,628 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+<title>PPPanel 060520 - Create Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link id="hostStyle" rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/semantic.min.css">
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
 
-     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+body{
+  background: #232323;
+  font-family: 'Montserrat';
+}
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+.checkedChecklist{
+    background-color: #32CC6E
+}
 
-    <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+i:hover{
+  cursor: pointer;
+}
 
-	<link rel="stylesheet" href="style.css">
-</head>
+#showData {
+  font-family: 'Montserrat';
+  border-collapse: collapse;
+  table-layout: fixed;
+  width:95%;
+  color: white;
+  overflow: auto;
+  white-space: nowrap;
+}
 
-<body>
+#showData td, #showData th {
+  border: 1px solid #ddd;
+  padding: 5px;
+  color:white;
+  width:100px;
+}
 
-	<div style="height:50px; background-color: #232323;">
-		<h4 style="color: white;margin-left: 50px; padding-top:13px; font-family: 'Montserrat'; font-size: 20px;">BWRM Video Converter</h4>
-	</div>
+#showData tr:hover {
+  background-color: #2e8CEB;
+  color: white;
+}
 
-    <div style="width:300px; margin-left: 50px">
+#showData th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2e8CEB;
+  color: white;
+}
 
-    <div style="margin-top: 25px;">
-        <button id="ameVCSelectExportLocation" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px;">Select Export Location</button>
-        
-    </div>
+table#t01 {
+  font-family: 'Montserrat';
+  border-collapse: collapse;
+  width: 100%;
+  color: white;
+}
+
+table#t01 td, table#t01 th {
+  border: 1px solid #ddd;
+  padding: 5px;
+  color: white;
+}
+
+table#t01 tr:hover {
+  background-color: #2e8CEB;
+  color: white;
+}
+
+table#t01 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f2f2f2;
+  color: green;
+}
+
+td:empty {
+  display: none;
+}
+
+.briefDoc{
+  text-align:left;
+  font-family: 'Montserrat-thin';
+  font-size: 12px;
+}
+
+.myLabel{
+  width:125px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+</style>
+
+<div style="height:25px; background-color: #232323;">
+    <h4 style="color: white;margin-left: 50px; padding-top:13px; font-family: 'Montserrat'; font-size: 20px;">BWRM Video Management</h4>
+</div>
+<br>
+<section class="container-fluid py-2">
+    <div class="row">
+        <div class="col">
+            <ul id="tabsJustified" class="nav nav-tabs sticky-top" style="color:white; font-size: 15px; background-color: #232323;">
+                <li class="nav-item"><a href="" data-target="#animalSpoorTab" data-toggle="tab" class="nav-link small text-uppercase active">Animal Spoor</a></li>
+                <li class="nav-item"><a href="" data-target="#pantoneColoursTab" data-toggle="tab" class="nav-link small text-uppercase">Pantone Colours</a></li>
+                <li class="nav-item"><a href="" data-target="#googleEarthTab" data-toggle="tab" class="nav-link small text-uppercase">Google Earth</a></li>
+                <li class="nav-item"><a href="" data-target="#qaTab" data-toggle="tab" class="nav-link small text-uppercase">QA</a></li>
+                <li class="nav-item"><a href="" data-target="#exportTab" data-toggle="tab" class="nav-link small text-uppercase">Export</a></li>
+                <li class="nav-item"><a href="" data-target="#settingsTab" data-toggle="tab" class="nav-link small text-uppercase">Help</a></li>
+            </ul>
+            <br>
+            <div id="tabsJustifiedContent" class="tab-content" style="margin-left: 25px">
+                <div id="animalSpoorTab" class="tab-pane fade active show">
+                    <div>
+                        <div>
+                            <div>
+                                <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                                    <option value="" disabled selected>Job List</option>
+                                </select>
+                                <i id="dashboardRefreshJobList" style="color:white; margin-left: 5px; position:relative; bottom:6px" class="fa fa-refresh"></i>
+                            </div>
+                            <div>
+                                <select class="js-example-basic-single" name="state" id="brandList" style="width: 325px; height:35px; margin-bottom: 15px">
+                                    <option value="" disabled selected>Brand List</option>
+                                </select>
+                                <i id="dashboardRefreshBrandList" style="color:white; margin-left: 5px; position:relative; bottom:6px" class="fa fa-refresh"></i>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label style="color: white;font-family: 'Montserrat'; font-size: 15px;" class="form-check-label" for="exampleRadios1">
+                                Team Project
+                            </label>
+                            <input style="position:absolute; left:180px" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label style="position:absolute; left:180px;color: white;font-family: 'Montserrat'; font-size: 15px;" class="form-check-label" for="exampleRadios2">
+                                Normal Project
+                            </label>
+                        </div>
+                        <div style="width:350px; margin-top: 15px">
+                            <button id="dashboardGetBriefData" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px;">Get Brief</button>
+                            <i id="dashboardGetBriefDataInfo" style="color:white; float:right" class="fa fa-info"></i>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div id="pantoneColoursTab" class="tab-pane fade">
+                    <div>
+                        <p style="color:white; margin-bottom: 10px">1.</p>
+                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                            <option value="" disabled selected>Colour</option>
+                            <option value="" >Colour 1</option>
+                            <option value="" >Colour 2</option>
+                            <option value="" >Colour 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p style="color:white; margin-bottom: 10px">2.</p>
+                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                            <option value="" disabled selected>Colour</option>
+                            <option value="" >Colour 1</option>
+                            <option value="" >Colour 2</option>
+                            <option value="" >Colour 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p style="color:white; margin-bottom: 10px">3.</p>
+                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                            <option value="" disabled selected>Colour</option>
+                            <option value="" >Colour 1</option>
+                            <option value="" >Colour 2</option>
+                            <option value="" >Colour 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p style="color:white; margin-bottom: 10px">4.</p>
+                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                            <option value="" disabled selected>Colour</option>
+                            <option value="" >Colour 1</option>
+                            <option value="" >Colour 2</option>
+                            <option value="" >Colour 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p style="color:white; margin-bottom: 10px">5.</p>
+                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                            <option value="" disabled selected>Colour</option>
+                            <option value="" >Colour 1</option>
+                            <option value="" >Colour 2</option>
+                            <option value="" >Colour 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p style="color:white; margin-bottom: 10px">6.</p>
+                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                            <option value="" disabled selected>Colour</option>
+                            <option value="" >Colour 1</option>
+                            <option value="" >Colour 2</option>
+                            <option value="" >Colour 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p style="color:white; margin-bottom: 10px">7.</p>
+                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                            <option value="" disabled selected>Colour</option>
+                            <option value="" >Colour 1</option>
+                            <option value="" >Colour 2</option>
+                            <option value="" >Colour 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p style="color:white; margin-bottom: 10px">8.</p>
+                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                            <option value="" disabled selected>Colour</option>
+                            <option value="" >Colour 1</option>
+                            <option value="" >Colour 2</option>
+                            <option value="" >Colour 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p style="color:white; margin-bottom: 10px">9.</p>
+                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                            <option value="" disabled selected>Colour</option>
+                            <option value="" >Colour 1</option>
+                            <option value="" >Colour 2</option>
+                            <option value="" >Colour 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p style="color:white; margin-bottom: 10px">10.</p>
+                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                            <option value="" disabled selected>Colour</option>
+                            <option value="" >Colour 1</option>
+                            <option value="" >Colour 2</option>
+                            <option value="" >Colour 3</option>
+                        </select>
+                    </div>
+                       
+                    
+                </div>
+
+                <div id="googleEarthTab" class="tab-pane fade">
+                    <div style="width:350px;">
+                        <button id="randomUtility" disabled class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px">Random Utility</button>
+                        <i id="randomUtilityInfo" style="position:relative; color:white; float:right" class="fa fa-info"></i>
+                    </div>
+                </div>
+
+
+
+                <div id="qaTab" class="tab-pane fade">
+                    <div style="width:350px;">
+                      <button id="adminQASomething" disabled class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-bottom: 15px;">QA Something</button>
+                      <i id="adminQASomethingInfo" style="position:relative; color:white; float:right" class="fa fa-info"></i>
+                    </div>
+                    <div style="width:350px;">
+                        <button id="adminGetChanges" disabled class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-bottom: 15px;">Get Changes</button>
+                        <i id="adminGetChangesInfo" style="position:relative; color:white; float:right" class="fa fa-info"></i>
+                    </div>
+                 
+
+
+
+
+
+
+                  <h3 style="margin-bottom: 15px">QA Checklist</h3>
+
+
+                    <div>
+                        <button id="qaChecklist01" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Check the brief</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist02" class="roundChecklist btn btn-circle btn-circle-sm border" style=" border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white;position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Spelling</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist03" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Branding</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist04" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Branding order</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist05" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Flow of the edit</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist06" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Have most of the clips been used?</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist07" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Does the edit match the voice over?</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist08" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">References in the edit folder</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist09" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">In & out points of cuts</span>
+                    </div>
+                     <div>
+                        <button id="qaChecklist10" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Have shaky shots been stabilised?</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist11" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Has the edit been cut to the beat?</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist12" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Is the edit the correct length?</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist13" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">White balance, exposure, colour</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist14" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Audio levels</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist15" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Media management</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist16" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Reference videos</span>
+                    </div>
+                    <div>
+                        <button id="qaChecklist17" class="roundChecklist btn btn-circle btn-circle-sm border" style="border-radius: 50%; width: 30px; height: 30px;line-height: 30px; margin-bottom: 10px;"><i style="color:white; position: relative;top: -5px; left: -3px" class="checkmark"></i></button>
+                        <span style="position:relative; margin-left: 15px; bottom: 4px">Any extras e.g. extra AE, clip count, voice over length</span>
+                    </div>
+                    
     
-    <div>
-    <label style="color:white; margin-top: 10px; font-family: 'Montserrat';font-size: 15px" for="ameVCExportPath">Export Path:</label>
-    <p id="ameVCExportPath" style="color:white; font-family: 'Montserrat-thin';font-size: 12px"></p>
-    </div>
+                </div>
 
-	<form style="font-family: 'Montserrat';font-size: 15px; margin-top: 25px">
-        <div class="form-group" style="width:300px">
-            <label style="color:white" for="fpCustomText">Address:</label>
-            
-            <textarea id="ameVCAddress" class="form-control" rows="1"></textarea>
+
+
+                <div id="exportTab" class="tab-pane fade">
+                    <div style="width:350px;">
+                        <button id="adminExportAllSequences" disabled class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px;">Export All Sequences</button>
+                        <i id="adminExportAllSequencesInfo" style="position:relative; color:white; float:right" class="fa fa-info"></i>
+                    </div>
+                </div>
+
+                <div id="settingsTab" class="tab-pane fade">
+                    <div style="width:350px;">
+                        <button id="adminReloadDashboard" class="btn btn-success" style="margin-bottom:15px; background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px;">Reload Dashboard</button>
+                        <i id="adminReloadDashboardInfo" style="position:relative; color:white; float:right" class="fa fa-info"></i>
+                    </div>
+
+                    <div>
+                      <button id="brandbookButton" class="btn btn-success" style="background-color: #32CC6E; margin-bottom: 15px; font-family: 'Montserrat';font-size: 15px;">Brandbook</button>
+                    </div>
+                    <div>
+                         <button id="ppWorkflowButton" class="btn btn-success" style="background-color: #32CC6E; margin-bottom: 15px; font-family: 'Montserrat';font-size: 15px;">PP Workflow</button>
+                    </div>
+                    <div>
+                         <button id="aeWorkflowButton" class="btn btn-success" style="background-color: #32CC6E; margin-bottom: 15px; font-family: 'Montserrat';font-size: 15px;">AE Workflow</button>
+                    </div>
+                    <div>
+                        <button id="adobeButton" class="btn btn-success" style="background-color: #32CC6E; margin-bottom: 15px; font-family: 'Montserrat';font-size: 15px;">Adobe</button>
+                    </div>
+
+                  
+                    
+                </div>
+            </div>
         </div>
-        <div class="form-group" style="width:300px; margin-top: 25px">
-            <label style="color:white" for="ameVCCopyCreateProxyDD">Copy/Create Proxy</label>
-    
-            <select id="ameVCCopyCreateProxyDD" class="form-control">
-                <option>Create Proxy</option>
-                <option>Copy & Create Proxy</option>
-            </select>
-        </div>
-    </form>
-
-    <div style="margin-top: 25px;">
-        <button id="ameVCSelectVideoFiles" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px;">Select Video Files</button>
-        
     </div>
+</section>
+<br>
+<div style="width: 350px; margin-left: 40px">
+    <hr style="border: 1px solid white;">
+    <p id="briefDataTitleLabel" style="color:white; font-family: 'Montserrat';font-size: 15px; visibility: hidden">Brief Data: <span id="briefDataTitle" style="font-family: 'Montserrat-thin';font-size: 14px;">180 Lagoon Street, Elsewhere</span></p>
 
-	<br>
-	<br>
-	<br>
-	<button id="ameVCHelpButton" class="btn btn-info btn-circle btn-circle-sm border"><i class="fa fa-info"></i></button>
-	<img src="lib/bwrm Logo White.png" style="width: 100px; float:right">
+<table id="t01" style="width: 350px; visibility: hidden">
+  <tr>
+    <td id="briefUrgencyTableLabel" class="myLabel"></td>
+    <td id="briefUrgencyTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="briefAddressTableLabel" class="myLabel"></td>
+    <td id="briefAddressTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="briefProductTableLabel" class="myLabel"></td>
+    <td id="briefProductTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="briefMemberTableLabel" class="myLabel"></td>
+    <td id="briefMemberTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="agencyNameTableLabel" class="myLabel"></td>
+    <td id="agencyNameTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="numberAgentsTableLabel" class="myLabel"></td>
+    <td id="numberAgentsTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="agentOneTableLabel" class="myLabel"></td>
+    <td id="agentOneNameTable" class="briefDoc" ></td>
+    <td id="agentOnePhoneTable" class="briefDoc" ></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id="agentOneEmailTable" class="briefDoc" colspan="3"></td>
+  </tr>
+    <tr>
+    <td id="agentTwoTableLabel" class="myLabel"></td>
+    <td id="agentTwoNameTable" class="briefDoc" ></td>
+    <td id="agentTwoPhoneTable" class="briefDoc" ></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id="agentTwoEmailTable" class="briefDoc" colspan="3"></td>
+  </tr>
+  <tr>
+    <td id="agentThreeTableLabel" class="myLabel"></td>
+    <td id="agentThreeNameTable" class="briefDoc" ></td>
+    <td id="agentThreePhoneTable" class="briefDoc" ></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id="agentThreeEmailTable" class="briefDoc" colspan="3"></td>
+  </tr>
+  <tr>
+    <td id="agentFourTableLabel" class="myLabel"></td>
+    <td id="agentFourNameTable" class="briefDoc" ></td>
+    <td id="agentFourPhoneTable" class="briefDoc" ></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id="agentFourEmailTable" class="briefDoc" colspan="3"></td>
+  </tr>
+  <tr>
+    <td id="videoLengthTableLabel" class="myLabel"></td>
+    <td id="videoLengthTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="videoPaceTableLabel" class="myLabel"></td>
+    <td id="videoPaceTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="numberClipsTableLabel" class="myLabel"></td>
+    <td id="numberClipsTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="featuredPeopleTableLabel" class="myLabel"></td>
+    <td id="featuredPeopleTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="includedAssetsTableLabel" class="myLabel"></td>
+    <td id="includedAssetsTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="GEATableLabel" class="myLabel"></td>
+    <td id="GEATable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="lightLeaksTableLabel" class="myLabel"></td>
+    <td id="lightLeaksTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="brandingMediaStartTableLabel" class="myLabel"></td>
+    <td id="brandingMediaStartTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="afterEffectsTableLabel" class="myLabel"></td>
+    <td id="afterEffectsTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="numAETableLabel" class="myLabel"></td>
+    <td id="numAETable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="propertyOutlinesTableLabel" class="myLabel"></td>
+    <td id="propertyOutlinesTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="locationIconsTableLabel" class="myLabel"></td>
+    <td id="locationIconsTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="COT1TableLabel" class="myLabel"></td>
+    <td id="COT1Table" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="COT2TableLabel" class="myLabel"></td>
+    <td id="COT2Table" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="COT3TableLabel" class="myLabel"></td>
+    <td id="COT3Table" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="COT4TableLabel" class="myLabel"></td>
+    <td id="COT4Table" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="COT5TableLabel" class="myLabel"></td>
+    <td id="COT5Table" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="COT5TableLabel" class="myLabel"></td>
+    <td id="COT5Table" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="COT6TableLabel" class="myLabel"></td>
+    <td id="COT6Table" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="COT7TableLabel" class="myLabel"></td>
+    <td id="COT7Table" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="COT8TableLabel" class="myLabel"></td>
+    <td id="COT8Table" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="COT8TableLabel" class="myLabel"></td>
+    <td id="COT8Table" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="extraAEInfoTableLabel" class="myLabel"></td>
+    <td id="extraAEInfoTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="propertyIconsTableLabel" class="myLabel"></td>
+    <td id="propertyIconsTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="bedsTableLabel" class="myLabel"></td>
+    <td id="bedsTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="bathsTableLabel" class="myLabel"></td>
+    <td id="bathsTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="carsTableLabel" class="myLabel"></td>
+    <td id="carsTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="m2TableLabel" class="myLabel"></td>
+    <td id="m2Table" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="musicTableLabel" class="myLabel"></td>
+    <td id="musicTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="musicGenreTableLabel" class="myLabel"></td>
+    <td id="musicGenreTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="musicTrackTableLabel" class="myLabel"></td>
+    <td id="musicTrackTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="keyFeaturesTableLabel" class="myLabel"></td>
+    <td id="keyFeaturesTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="referenceVideoTableLabel" class="myLabel"></td>
+    <td id="referenceVideoTable" class="briefDoc" colspan="2"></td>
+  </tr>
+  <tr>
+    <td id="otherInfoTableLabel" class="myLabel"></td>
+    <td id="otherInfoTable" class="briefDoc" colspan="2"></td>
+  </tr>
+</table>
+
+<br>
+<br>
+
+    <button id="dashboardOverallInfo" class="btn btn-info btn-circle btn-circle-sm border" style="border-radius: 50%;"><i class="fa fa-info"></i></button>
+    <img src="icons/bwrm Logo White.png" style="width: 100px; float:right">
     <div>
-        <p style="float:right; color:white; font-family: 'Montserrat-thin';font-size: 12px">V1.07.20</p>
+        <p style="color: white; font-family: 'Montserrat-thin'; font-size: 12px; float:right">V1.0.14.20</p>
     </div>
-	<br>
-
-    </div>
-
+</div>
+<br>
+<br>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-<script src="./lib/jquery-1.9.1.js"></script>
-<script src="./ext.js"></script>
-<script>
-</script>
-
-    
+<script src="js/libs/jquery-2.0.2.min.js"></script>
+<script src="js/themeManager.js"></script>
+<script src="ext.js"></script>
+<script src="js/libs/select2.min.js"></script>
+<script src="js/libs/semantic.min.js"></script>
 </body>
+
 </html>
