@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>PPPanel 060520 - Create Project</title>
+<title>Family Quiz 190720</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link id="hostStyle" rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,82 +25,16 @@ i:hover{
   cursor: pointer;
 }
 
-#showData {
-  font-family: 'Montserrat';
-  border-collapse: collapse;
-  table-layout: fixed;
-  width:95%;
-  color: white;
-  overflow: auto;
-  white-space: nowrap;
-}
-
-#showData td, #showData th {
-  border: 1px solid #ddd;
-  padding: 5px;
-  color:white;
-  width:100px;
-}
-
-#showData tr:hover {
-  background-color: #2e8CEB;
-  color: white;
-}
-
-#showData th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #2e8CEB;
-  color: white;
-}
-
-table#t01 {
-  font-family: 'Montserrat';
-  border-collapse: collapse;
-  width: 100%;
-  color: white;
-}
-
-table#t01 td, table#t01 th {
-  border: 1px solid #ddd;
-  padding: 5px;
-  color: white;
-}
-
-table#t01 tr:hover {
-  background-color: #2e8CEB;
-  color: white;
-}
-
-table#t01 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #f2f2f2;
-  color: green;
-}
-
-td:empty {
-  display: none;
-}
-
-.briefDoc{
-  text-align:left;
-  font-family: 'Montserrat-thin';
-  font-size: 12px;
-}
-
-.myLabel{
-  width:125px;
-  font-weight: bold;
-  font-size: 12px;
+.colourDiv{
+  height:300px;
+  width:300px;
+  border-radius: 25px
 }
 
 </style>
 
 <div style="height:25px; background-color: #232323;">
-    <h4 style="color: white;margin-left: 50px; padding-top:13px; font-family: 'Montserrat'; font-size: 20px;">BWRM Video Management</h4>
+    <h4 style="color: white;margin-left: 50px; padding-top:13px; font-family: 'Montserrat'; font-size: 20px;">Family Quiz</h4>
 </div>
 <br>
 <section class="container-fluid py-2">
@@ -153,113 +87,115 @@ td:empty {
                 <div id="pantoneColoursTab" class="tab-pane fade">
                     <div>
                         <p style="color:white; margin-bottom: 10px">1.</p>
-                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                        <div class="colourDiv" style="background-color:#CC6666; margin-bottom:10px; border-radius: 25px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Colour 1</option>
-                            <option value="" >Colour 2</option>
-                            <option value="" >Colour 3</option>
+                            <option value="" >Mahogany</option>
+                            <option value="correct" >Fuzzy Wuzzy Brown</option>
+                            <option value="" >Chestnut</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">2.</p>
-                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                        <div class="colourDiv" style="background-color:#9F8170; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Colour 1</option>
-                            <option value="" >Colour 2</option>
-                            <option value="" >Colour 3</option>
+                            <option value="correct" >Beaver</option>
+                            <option value="" >Tumbleweed</option>
+                            <option value="" >Raw Sienna</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">3.</p>
-                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                        <div class="colourDiv" style="background-color:#F0E891; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Colour 1</option>
-                            <option value="" >Colour 2</option>
-                            <option value="" >Colour 3</option>
+                            <option value="" >Banana Mania</option>
+                            <option value="correct" >Green Yellow</option>
+                            <option value="" >Unmellow Yellow</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">4.</p>
-                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                        <div class="colourDiv" style="background-color:#A8E4A0; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Colour 1</option>
-                            <option value="" >Colour 2</option>
-                            <option value="" >Colour 3</option>
+                            <option value="correct" >Granny Smith Apple</option>
+                            <option value="" >Inch Worm</option>
+                            <option value="" >Asparagus</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">5.</p>
-                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                        <div class="colourDiv" style="background-color:#1CAC78; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Colour 1</option>
-                            <option value="" >Colour 2</option>
-                            <option value="" >Colour 3</option>
+                            <option value="" >Forest Green</option>
+                            <option value="" >Sea Green</option>
+                            <option value="correct" >Green</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">6.</p>
-                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                        <div class="colourDiv" style="background-color:#199EBD; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Colour 1</option>
-                            <option value="" >Colour 2</option>
-                            <option value="" >Colour 3</option>
+                            <option value="correct" >Blue Green</option>
+                            <option value="" >Cerulean</option>
+                            <option value="" >Pacific Blue</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">7.</p>
-                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                        <div class="colourDiv" style="background-color:#A2ADD0; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Colour 1</option>
-                            <option value="" >Colour 2</option>
-                            <option value="" >Colour 3</option>
+                            <option value="correct" >Wild Blue Yonder</option>
+                            <option value="" >Periwinkle</option>
+                            <option value="" >Manatee</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">8.</p>
-                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                        <div class="colourDiv" style="background-color:#926EAE; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width:300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Colour 1</option>
-                            <option value="" >Colour 2</option>
-                            <option value="" >Colour 3</option>
+                            <option value="" >Wisteria</option>
+                            <option value="" >Purple Mountains’ Majesty</option>
+                            <option value="correct" >Violet</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">9.</p>
-                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                        <div class="colourDiv" style="background-color:#FF1DCE; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Colour 1</option>
-                            <option value="" >Colour 2</option>
-                            <option value="" >Colour 3</option>
+                            <option value="" >Purple Pizzazz</option>
+                            <option value="correct" >Hot Magenta</option>
+                            <option value="" >Razzle Dazzle Rose</option>
                         </select>
                     </div>
 
                     <div>
                         <p style="color:white; margin-bottom: 10px">10.</p>
-                        <div style="background-color:#CC6666; height:100px; width: 100px; margin-bottom: 10px"></div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 325px; height:35px; margin-bottom: 15px">
+                        <div class="colourDiv" style="background-color:#FC6C85; margin-bottom: 10px"></div>
+                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Colour</option>
-                            <option value="" >Colour 1</option>
-                            <option value="" >Colour 2</option>
-                            <option value="" >Colour 3</option>
+                            <option value="" >Mauvelous</option>
+                            <option value="correct" >Wild Watermelon</option>
+                            <option value="" >Salmon</option>
                         </select>
                     </div>
+
+                    <button id="randomUtility" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-top: 20px">Submit Answers</button>
                        
                     
                 </div>
@@ -402,208 +338,7 @@ td:empty {
 <br>
 <div style="width: 350px; margin-left: 40px">
     <hr style="border: 1px solid white;">
-    <p id="briefDataTitleLabel" style="color:white; font-family: 'Montserrat';font-size: 15px; visibility: hidden">Brief Data: <span id="briefDataTitle" style="font-family: 'Montserrat-thin';font-size: 14px;">180 Lagoon Street, Elsewhere</span></p>
 
-<table id="t01" style="width: 350px; visibility: hidden">
-  <tr>
-    <td id="briefUrgencyTableLabel" class="myLabel"></td>
-    <td id="briefUrgencyTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="briefAddressTableLabel" class="myLabel"></td>
-    <td id="briefAddressTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="briefProductTableLabel" class="myLabel"></td>
-    <td id="briefProductTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="briefMemberTableLabel" class="myLabel"></td>
-    <td id="briefMemberTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="agencyNameTableLabel" class="myLabel"></td>
-    <td id="agencyNameTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="numberAgentsTableLabel" class="myLabel"></td>
-    <td id="numberAgentsTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="agentOneTableLabel" class="myLabel"></td>
-    <td id="agentOneNameTable" class="briefDoc" ></td>
-    <td id="agentOnePhoneTable" class="briefDoc" ></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td id="agentOneEmailTable" class="briefDoc" colspan="3"></td>
-  </tr>
-    <tr>
-    <td id="agentTwoTableLabel" class="myLabel"></td>
-    <td id="agentTwoNameTable" class="briefDoc" ></td>
-    <td id="agentTwoPhoneTable" class="briefDoc" ></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td id="agentTwoEmailTable" class="briefDoc" colspan="3"></td>
-  </tr>
-  <tr>
-    <td id="agentThreeTableLabel" class="myLabel"></td>
-    <td id="agentThreeNameTable" class="briefDoc" ></td>
-    <td id="agentThreePhoneTable" class="briefDoc" ></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td id="agentThreeEmailTable" class="briefDoc" colspan="3"></td>
-  </tr>
-  <tr>
-    <td id="agentFourTableLabel" class="myLabel"></td>
-    <td id="agentFourNameTable" class="briefDoc" ></td>
-    <td id="agentFourPhoneTable" class="briefDoc" ></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td id="agentFourEmailTable" class="briefDoc" colspan="3"></td>
-  </tr>
-  <tr>
-    <td id="videoLengthTableLabel" class="myLabel"></td>
-    <td id="videoLengthTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="videoPaceTableLabel" class="myLabel"></td>
-    <td id="videoPaceTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="numberClipsTableLabel" class="myLabel"></td>
-    <td id="numberClipsTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="featuredPeopleTableLabel" class="myLabel"></td>
-    <td id="featuredPeopleTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="includedAssetsTableLabel" class="myLabel"></td>
-    <td id="includedAssetsTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="GEATableLabel" class="myLabel"></td>
-    <td id="GEATable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="lightLeaksTableLabel" class="myLabel"></td>
-    <td id="lightLeaksTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="brandingMediaStartTableLabel" class="myLabel"></td>
-    <td id="brandingMediaStartTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="afterEffectsTableLabel" class="myLabel"></td>
-    <td id="afterEffectsTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="numAETableLabel" class="myLabel"></td>
-    <td id="numAETable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="propertyOutlinesTableLabel" class="myLabel"></td>
-    <td id="propertyOutlinesTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="locationIconsTableLabel" class="myLabel"></td>
-    <td id="locationIconsTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="COT1TableLabel" class="myLabel"></td>
-    <td id="COT1Table" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="COT2TableLabel" class="myLabel"></td>
-    <td id="COT2Table" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="COT3TableLabel" class="myLabel"></td>
-    <td id="COT3Table" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="COT4TableLabel" class="myLabel"></td>
-    <td id="COT4Table" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="COT5TableLabel" class="myLabel"></td>
-    <td id="COT5Table" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="COT5TableLabel" class="myLabel"></td>
-    <td id="COT5Table" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="COT6TableLabel" class="myLabel"></td>
-    <td id="COT6Table" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="COT7TableLabel" class="myLabel"></td>
-    <td id="COT7Table" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="COT8TableLabel" class="myLabel"></td>
-    <td id="COT8Table" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="COT8TableLabel" class="myLabel"></td>
-    <td id="COT8Table" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="extraAEInfoTableLabel" class="myLabel"></td>
-    <td id="extraAEInfoTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="propertyIconsTableLabel" class="myLabel"></td>
-    <td id="propertyIconsTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="bedsTableLabel" class="myLabel"></td>
-    <td id="bedsTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="bathsTableLabel" class="myLabel"></td>
-    <td id="bathsTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="carsTableLabel" class="myLabel"></td>
-    <td id="carsTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="m2TableLabel" class="myLabel"></td>
-    <td id="m2Table" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="musicTableLabel" class="myLabel"></td>
-    <td id="musicTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="musicGenreTableLabel" class="myLabel"></td>
-    <td id="musicGenreTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="musicTrackTableLabel" class="myLabel"></td>
-    <td id="musicTrackTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="keyFeaturesTableLabel" class="myLabel"></td>
-    <td id="keyFeaturesTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="referenceVideoTableLabel" class="myLabel"></td>
-    <td id="referenceVideoTable" class="briefDoc" colspan="2"></td>
-  </tr>
-  <tr>
-    <td id="otherInfoTableLabel" class="myLabel"></td>
-    <td id="otherInfoTable" class="briefDoc" colspan="2"></td>
-  </tr>
-</table>
-
-<br>
 <br>
 
     <button id="dashboardOverallInfo" class="btn btn-info btn-circle btn-circle-sm border" style="border-radius: 50%;"><i class="fa fa-info"></i></button>
