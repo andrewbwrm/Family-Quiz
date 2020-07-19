@@ -32,6 +32,13 @@ i:hover{
   margin-bottom: 10px;
 }
 
+.correctAnswer{
+  border: green solid 5px;
+}
+.incorrectAnswer{
+  border: red solid 5px;
+}
+
 </style>
 
 <div style="height:25px; background-color: #232323;">
@@ -54,314 +61,318 @@ i:hover{
 
 
                 <div id="animalSpoorTab" class="tab-pane fade active show">
-                  <div>
+
+                  <div id="animalSpoorDiv1">
                         <p style="color:white; margin-bottom: 10px">1.</p>
-                        <img class="colourDiv" src="Images/Poo/African Elephant.jpg" alt="">
+                        <img id="animalSpoorImg1" class="colourDiv" src="Images/Poo/African Elephant.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect1" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv2">
                         <p style="color:white; margin-bottom: 10px">2.</p>
-                        <img class="colourDiv" src="Images/FootPrints/Cassowary.jpg" alt="">
+                        <img id="animalSpoorImg2" class="colourDiv" src="Images/FootPrints/Cassowary.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect2" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv3">
                         <p style="color:white; margin-bottom: 10px">3.</p>
-                        <img class="colourDiv" src="Images/Poo/Wombat.jpg" alt="">
+                        <img id="animalSpoorImg3" class="colourDiv" src="Images/Poo/Wombat.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect3" class="js-example-basic-single" name="state"  style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv4">
                         <p style="color:white; margin-bottom: 10px">4.</p>
-                        <img class="colourDiv" src="Images/FootPrints/Red Fox.jpg" alt="">
+                        <img id="animalSpoorImg4" class="colourDiv" src="Images/FootPrints/Red Fox.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect4" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv5">
                         <p style="color:white; margin-bottom: 10px">5.</p>
-                        <img class="colourDiv" src="Images/Poo/Rhino.jpg" alt="">
+                        <img id="animalSpoorImg5" class="colourDiv" src="Images/Poo/Rhino.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect5" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv6">
                         <p style="color:white; margin-bottom: 10px">6.</p>
-                        <img class="colourDiv" src="Images/FootPrints/Kangaroo.jpg" alt="">
+                        <img id="animalSpoorImg6" class="colourDiv" src="Images/FootPrints/Kangaroo.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect6" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv7">
                         <p style="color:white; margin-bottom: 10px">7.</p>
-                        <img class="colourDiv" src="Images/Poo/Hedgehog.jpeg" alt="">
+                        <img id="animalSpoorImg7" class="colourDiv" src="Images/Poo/Hedgehog.jpeg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect7" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv8">
                         <p style="color:white; margin-bottom: 10px">8.</p>
-                        <img class="colourDiv" src="Images/FootPrints/Hippo.jpg" alt="">
+                        <img id="animalSpoorImg8" class="colourDiv" src="Images/FootPrints/Hippo.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect8" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv9">
                         <p style="color:white; margin-bottom: 10px">9.</p>
-                        <img class="colourDiv" src="Images/Poo/Cassowary.jpg" alt="">
+                        <img id="animalSpoorImg9" class="colourDiv" src="Images/Poo/Cassowary.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect9" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv10">
                         <p style="color:white; margin-bottom: 10px">10.</p>
-                        <img class="colourDiv" src="Images/FootPrints/African Lion.jpg" alt="">
+                        <img id="animalSpoorImg10" class="colourDiv" src="Images/FootPrints/African Lion.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect10" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv11">
                         <p style="color:white; margin-bottom: 10px">11.</p>
-                        <img class="colourDiv" src="Images/Poo/European Badger.jpg" alt="">
+                        <img id="animalSpoorImg11" class="colourDiv" src="Images/Poo/European Badger.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect11" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv12">
                         <p style="color:white; margin-bottom: 10px">12.</p>
-                        <img class="colourDiv" src="Images/FootPrints/Crocodile.jpg" alt="">
+                        <img id="animalSpoorImg12" class="colourDiv" src="Images/FootPrints/Crocodile.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect12" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
-                    <div>
+                    <div id="animalSpoorDiv13">
                         <p style="color:white; margin-bottom: 10px">13.</p>
-                        <img class="colourDiv" src="Images/Poo/Owl.jpg" alt="">
+                        <img id="animalSpoorImg13" class="colourDiv" src="Images/Poo/Owl.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect13" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="animalSpoorDiv14">
                         <p style="color:white; margin-bottom: 10px">14.</p>
-                        <img class="colourDiv" src="Images/FootPrints/African Elephant.jpg" alt="">
+                        <img id="animalSpoorImg14" class="colourDiv" src="Images/FootPrints/African Elephant.jpg" alt="">
                         <div>
-                        <select class="js-example-basic-single" name="state" id="jobList" style="width: 300px; height:35px; margin-bottom: 15px">
+                        <select id="animalSpoorSelect14" class="js-example-basic-single" name="state" style="width: 300px; height:35px; margin-bottom: 15px">
                             <option value="" disabled selected>Animal</option>
-                            <option value="" >African Elephant</option>
-                            <option value="" >African Lion</option>
-                            <option value="" >Cassowary</option>
-                            <option value="" >Crocodile</option>
-                            <option value="" >European Badger</option>
-                            <option value="" >Hedgehog</option>
-                            <option value="" >Hippo</option>
-                            <option value="" >Kangaroo</option>
-                            <option value="" >Owl</option>
-                            <option value="" >Red Fox</option>
-                            <option value="" >Rhino</option>
-                            <option value="" >Wombat</option>
+                            <option value="African Elephant" >African Elephant</option>
+                            <option value="African Lion" >African Lion</option>
+                            <option value="Cassowary" >Cassowary</option>
+                            <option value="Crocodile" >Crocodile</option>
+                            <option value="European Badger" >European Badger</option>
+                            <option value="Hedgehog" >Hedgehog</option>
+                            <option value="Hippo" >Hippo</option>
+                            <option value="Kangaroo" >Kangaroo</option>
+                            <option value="Owl" >Owl</option>
+                            <option value="Red Fox" >Red Fox</option>
+                            <option value="Rhino" >Rhino</option>
+                            <option value="Wombat" >Wombat</option>
                         </select>
                         </div>
                     </div>
 
-                    <button id="randomUtility" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-top: 20px">Submit Answers</button>
+                    <button id="animalSpoorSubmit" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-top: 20px; margin-bottom: 20px">Submit Answers</button>
+                    <div>
+                      <p id="animalSpoorScore" style="color:white; margin-bottom: 10px">Score: </p>
+                    </div>
                     
                 </div>
 
@@ -718,6 +729,7 @@ i:hover{
 
                     
                     <button id="randomUtility" class="btn btn-success" style="background-color: #32CC6E; font-family: 'Montserrat';font-size: 15px; margin-top: 20px">Submit Answers</button>
+                    <p id="animalSpoorScore" style="color:white">Score: </p>
                 </div>
 
 
